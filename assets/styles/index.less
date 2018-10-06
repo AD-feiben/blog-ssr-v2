@@ -1,0 +1,38 @@
+@import './helpers.less';
+@import './baseStyle.less';
+
+.safeArea{
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: 1200px) {
+    .ph-150;
+  }
+  @media (max-width: 1200px) {
+    .ph-80;
+  }
+  @media (max-width: 992px) {
+    .ph-50;
+  }
+  @media (max-width: 767px) {
+    .p-10;
+  }
+}
+
+body{
+  font-size: 16px;
+  color: @text_main;
+  background-color: #fff;
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+a{
+  color: @text_normal;
+  transition: all .2s;
+  &:hover{
+    color: @primary;
+  }
+}

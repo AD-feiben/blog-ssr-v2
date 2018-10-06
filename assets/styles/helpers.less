@@ -1,0 +1,59 @@
+@import './variable.less';
+
+.helps(150);
+.helps(@n, @i: 0) when (@i =< @n) {
+  @px: (1px * @i);
+  .p-@{i}{padding: @px;}
+  .pt-@{i}{padding-top: @px;}
+  .pr-@{i}{padding-right: @px;}
+  .pb-@{i}{padding-bottom: @px;}
+  .pl-@{i}{padding-left: @px;}
+  .pv-@{i}{
+    padding-top: @px;
+    padding-bottom: @px;
+  }
+  .ph-@{i}{
+    padding-left: @px;
+    padding-right: @px;
+  }
+
+  .m-@{i}{margin: @px;}
+  .mt-@{i}{margin-top: @px;}
+  .mr-@{i}{margin-right: @px;}
+  .mb-@{i}{margin-bottom: @px;}
+  .ml-@{i}{margin-left: @px;}
+  .mv-@{i}{
+    margin-top: @px;
+    margin-bottom: @px;
+  }
+  .mh-@{i}{
+    margin-left: @px;
+    margin-right: @px;
+  }
+  .helps(@n, @i + 1);
+}
+
+.bb{
+  border-bottom: 1px solid @border1;
+}
+
+.card{
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+}
+
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+
+.pagination{
+  .mt-20;
+  @media (max-width: 767px) {
+    .mb-10;
+  }
+}

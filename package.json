@@ -4,6 +4,12 @@
   "description": "feiben&#39;s blog",
   "author": "shirunpei",
   "private": true,
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "8088"
+    }
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -13,16 +19,21 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0",
     "element-ui": "^2.4.6",
-    "@nuxtjs/axios": "^5.0.0"
+    "jump.js": "^1.0.2",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "nuxt": "^2.0.0",
+    "prismjs": "^1.15.0",
+    "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0",
     "babel-eslint": "^8.2.1",
     "eslint": "^5.0.1",
     "eslint-loader": "^2.0.0",
-    "eslint-plugin-vue": "^4.0.0"
+    "eslint-plugin-vue": "^4.0.0",
+    "nodemon": "^1.11.0"
   }
 }

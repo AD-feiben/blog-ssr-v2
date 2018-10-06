@@ -1,4 +1,5 @@
 const pkg = require('./package')
+const setting = require('./plugins/setting')
 
 module.exports = {
   mode: 'universal',
@@ -7,11 +8,12 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: '飞奔 | 飞奔的博客 ， 前端develop，技术分享，不止前端，Not only front-end!',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no' },
+      { hid: 'description', name: 'description', content: '飞奔的博客是用来发表前端以及其他技术的文章，微信公众号 前端develop，技术分享，Not only front-end!' },
+      { hid: 'keywords', name: 'keywords', content: '飞奔,飞奔的博客,前端develop,技术分享,不止前端,feiben,blog,feiben\’s blog,Not only front-end!' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -21,21 +23,23 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#409EFF' },
 
   /*
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    'element-ui/lib/theme-chalk/display.css',
+    { src: '@/assets/styles/index.less', lang: 'less' }
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-    '@/plugins/element-ui'
-  ],
+  // plugins: [
+  //   '@/plugins/element-ui'
+  // ],
 
   /*
   ** Nuxt.js modules
@@ -47,9 +51,11 @@ module.exports = {
   /*
   ** Axios module configuration
   */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-  },
+  // axios: {
+  //   // See https://github.com/nuxt-community/axios-module#options
+  // },
+
+  ...setting,
 
   /*
   ** Build configuration
