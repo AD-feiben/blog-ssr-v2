@@ -36,6 +36,8 @@ const config = {
   },
   // 来必力评论
   dataUid: 'MTAyMC8zNDQ1My8xMDk5MA==',
+  // cnzz
+  siteId: 1274633992
 }
 
 function setConfig (Vue) {

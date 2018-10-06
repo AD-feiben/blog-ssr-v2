@@ -36,12 +36,15 @@
           <el-row class="mb-20">
             <p>{{ `${$config.author} &copy; ${$config.footer.since} - ${curYear}` }}</p>
           </el-row>
-          <el-row>
+          <el-row class="mb-20">
             <p>Powered By
               <a
                 href="http://github.com/ad-feiben"
                 target="_blank">飞奔</a>
             </p>
+          </el-row>
+          <el-row>
+            <span :id="`cnzz_stat_icon_${$config.siteId}`"></span>
           </el-row>
         </el-col>
       </el-row>
