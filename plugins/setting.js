@@ -15,7 +15,7 @@ const setting = {
   },
   build: {
     axios: {
-      baseURL: 'feiben.xyz/api/'
+      baseURL: 'http://feiben.xyz/api/'
     },
     plugins: [
       '@/plugins/element-ui',

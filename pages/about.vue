@@ -48,12 +48,20 @@
       <p class="title mb-40">Bug Feedback</p>
       <el-row type="flex">
         <el-col>
-          <img src="https://png.icons8.com/material-outlined/50/606266/new-post.png">
-          <p>Email</p>
+          <a
+            :href="`mailto:${$config.feedback.email}`"
+            target="_blank">
+            <img src="https://png.icons8.com/material-outlined/50/606266/new-post.png">
+            <p>Email</p>
+          </a>
         </el-col>
         <el-col>
-          <img src="https://png.icons8.com/metro/50/606266/comments.png">
-          <p>Issues</p>
+          <a
+            :href="$config.feedback.githubIssues"
+            target="_blank">
+            <img src="https://png.icons8.com/metro/50/606266/comments.png">
+            <p>Issues</p>
+          </a>
         </el-col>
       </el-row>
     </div>
