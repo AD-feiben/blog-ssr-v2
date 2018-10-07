@@ -15,7 +15,7 @@ const setting = {
   },
   build: {
     axios: {
-      baseURL: `${location.protocol}//${location.host}/api/`
+      baseURL: '/api/'
     },
     plugins: [
       '@/plugins/element-ui',

@@ -6,7 +6,6 @@ export default function ({ $axios, redirect }) {
   }
   $axios.onRequest(config => {
     let commonParams = { state: 1 }
-
     if (config.method === 'get') {
       config.params = { ...config.params, ...commonParams }
     } else if (config.method === 'post') {
