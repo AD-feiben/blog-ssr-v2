@@ -15,7 +15,8 @@ const config = {
       { name: '飞奔·GitHub', title: 'GitHub', url: 'http://github.com/ad-feiben' },
       { name: '飞奔·掘金', title: '掘金', url: 'https://juejin.im/user/58d3ab5b128fe1006cb236e1' },
       { name: '飞奔·简书', title: '简书', url: 'https://www.jianshu.com/u/ccb05861b473' },
-      { name: 'Blog·V1', title: 'Blog', url: 'http://feiben.xyz/v1/' }
+      { name: 'Blog·V1', title: 'Blog', url: 'http://feiben.xyz/v1/' },
+      { name: 'Bitbank Wallet', title: 'Bitbank Wallet', url: 'http://feiben.xyz/bitbankwallet/' },
     ],
   },
   social: {
