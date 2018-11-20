@@ -98,7 +98,9 @@ export default {
     },
     tocClick (e) {
       if (e.target.tagName === 'A') {
-        jump(decodeURIComponent(e.target.hash), {
+        let id = decodeURIComponent(e.target.hash).substring(1)
+        let node = document.getElementById(id)
+        jump(node, {
           offset: -80,
           duration: 200
         })
