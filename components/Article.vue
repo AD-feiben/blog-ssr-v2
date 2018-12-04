@@ -8,7 +8,7 @@
         class="hidden-sm-and-up">
         <el-col>
           <img
-            :src="article.cover"
+            v-lazy="article.cover"
             :alt="article.title"
             class="cover-img">
         </el-col>
@@ -61,7 +61,7 @@
           :sm="{span: 5, offset: 1}"
           class="hidden-xs-only">
           <img
-            :src="article.cover"
+            v-lazy="article.cover"
             :alt="article.title"
             class="cover-img">
         </el-col>

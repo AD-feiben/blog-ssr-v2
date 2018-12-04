@@ -10,7 +10,8 @@ const setting = {
     plugins: [
       '@/plugins/element-ui',
       '@/plugins/axios',
-      '@/plugins/config'
+      '@/plugins/config',
+      {src: '@/plugins/lazyload', ssr: true}
     ]
   },
   build: {
@@ -21,7 +22,8 @@ const setting = {
       '@/plugins/element-ui',
       '@/plugins/logger',
       '@/plugins/axios',
-      '@/plugins/config'
+      '@/plugins/config',
+      {src: '@/plugins/lazyload', ssr: true}
     ]
   }
 }

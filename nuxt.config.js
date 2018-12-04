@@ -61,6 +61,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: ['vue-lazyload'],
     /*
     ** You can extend webpack config here
     */
