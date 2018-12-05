@@ -1,5 +1,6 @@
 <template lang="html">
-  <section class="article-card mb-10 p-20">
+  <section
+    class="article-card mb-10 p-20 wow">
     <nuxt-link
       :to="`/detail/${article._id}`"
       :title="article.title">

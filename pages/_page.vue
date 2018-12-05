@@ -2,7 +2,8 @@
   <div>
     <div v-if="articles.length">
       <Article
-        v-for="item in articles"
+        v-for="(item, index) in articles"
+        :class="index % 2 == 0 ? 'fadeInLeft' : 'fadeInRight'"
         :key="item._id"
         :article="item"/>
       <el-pagination
@@ -22,6 +23,10 @@
 <script>
 import Article from '@/components/Article'
 import { SUCCESS_CODE } from '@/utils/api'
+if (process.browser) { // 在这里根据环境引入wow.js
+  var { WOW } = require('wowjs')
+  var wow = new WOW()
+}
 export default {
   async asyncData ({ app, params, query, error }) {
     let { page } = params
@@ -53,6 +58,15 @@ export default {
       this.getData()
     }
   },
+  mounted () {
+    if (process.browser) {
+      this.$nextTick(() => {
+        wow.init()
+        window.scrollTo(0, 1)
+        window.scrollTo(0, 0)
+      })
+    }
+  },
   methods: {
     async getData () {
       let page = this.page
@@ -61,6 +75,11 @@ export default {
       if (res.code === SUCCESS_CODE) {
         this.articles = res.data.articles
         this.total = res.data.total
+        this.$nextTick(() => {
+          wow.init()
+          window.scrollTo(0, 1)
+          window.scrollTo(0, 0)
+        })
       }
     },
     currentChange (val) {
