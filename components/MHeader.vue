@@ -15,6 +15,7 @@
       <el-header
         class="safeArea">
         <el-row
+          class="header-container"
           type="flex"
           justify="space-between"
           align="middle"
@@ -123,7 +124,11 @@ export default {
       ],
       showMenu: false,
       keyword: '',
-      toCls: ['el-header safeArea', 'nav-box text-center el-row is-justify-end el-row--flex']
+      toCls: [
+        'el-header safeArea',
+        'nav-box text-center el-row is-justify-end el-row--flex',
+        'header-container el-row is-justify-space-between is-align-middle el-row--flex'
+      ]
     }
   },
   watch: {
@@ -147,6 +152,7 @@ export default {
       if (index > -1) this.menus[index].active = true
     },
     goTop (e) {
+      console.log(e.target.className)
       if (this.toCls.includes(e.target.className)) {
         let node = document.body
         jump(node, {
