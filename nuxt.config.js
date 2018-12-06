@@ -61,7 +61,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['vue-lazyload', 'wowjs'],
+    vendor: ['vue-lazyload', 'wowjs', 'DPlayer'],
     /*
     ** You can extend webpack config here
     */

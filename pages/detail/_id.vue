@@ -70,6 +70,7 @@ export default {
   async asyncData ({ app, params }) {
     let { id } = params
     if (id) {
+      console.log(id)
       let res = await app.$axios.get(`/article/${id}`)
       if (res.code === SUCCESS_CODE) {
         let tags = res.data.tags ? res.data.tags.split(',') : []
