@@ -9,8 +9,11 @@
         <p>{{ $config.header.description }}</p>
       </el-col>
     </el-row>
-    <div class="header-box bb card">
-      <el-header class="safeArea">
+    <div
+      class="header-box bb card"
+      @click="goTop">
+      <el-header
+        class="safeArea">
         <el-row
           type="flex"
           justify="space-between"
@@ -43,7 +46,7 @@
                 :lg="{span: 6}"
                 :md="{span: 7}"
                 :sm="{span: 7}"
-                class="hidden-xs-only">
+                class="hidden-xs-only input-box">
                 <el-input
                   v-model="keyword"
                   placeholder="标题、标签、分类"
@@ -107,6 +110,7 @@
 </template>
 
 <script>
+import jump from 'jump.js'
 export default {
   data () {
     return {
@@ -118,7 +122,8 @@ export default {
         {name: '关于', path: '/about', active: false}
       ],
       showMenu: false,
-      keyword: ''
+      keyword: '',
+      toCls: ['el-header safeArea', 'nav-box text-center el-row is-justify-end el-row--flex']
     }
   },
   watch: {
@@ -140,6 +145,15 @@ export default {
       })
       let index = routerNames.indexOf(routeName)
       if (index > -1) this.menus[index].active = true
+    },
+    goTop (e) {
+      if (this.toCls.includes(e.target.className)) {
+        let node = document.body
+        jump(node, {
+          offset: 0,
+          duration: 200
+        })
+      }
     }
   },
 }
@@ -159,6 +173,13 @@ export default {
   width: 100%;
   background-color: rgba(255, 255, 255, .9);
   z-index: 9999;
+}
+.logo-box{
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+  &:hover{
+    animation-name: rotate;
+    animation-duration: .8s;
+  }
 }
 .nav-box{
   font-size: 1em;
@@ -196,4 +217,4 @@ export default {
 .active{
   color: @primary;
 }
-</style>3
+</style>

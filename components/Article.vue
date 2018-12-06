@@ -102,7 +102,7 @@ export default {
 @import '../assets/styles/variable.less';
 
 .article-card{
-  transition: all .2s;
+  transition: all .5s;
   cursor: pointer;
   .title{
     color: @text_main;
@@ -122,6 +122,7 @@ export default {
     background-color: #fafafa;
   }
   &:hover{
+    transform: translateY(-2px);
     box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
   }
   @media (max-width: 767px) {
