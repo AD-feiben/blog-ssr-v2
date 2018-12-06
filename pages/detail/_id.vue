@@ -67,15 +67,18 @@ import jump from 'jump.js'
 import { SUCCESS_CODE } from '@/utils/api'
 
 export default {
-  async asyncData ({ app, params }) {
+  async asyncData ({ app, params, error }) {
     let { id } = params
     if (id) {
-      console.log(id)
       let res = await app.$axios.get(`/article/${id}`)
       if (res.code === SUCCESS_CODE) {
         let tags = res.data.tags ? res.data.tags.split(',') : []
         return {...res.data, tags}
+      } else {
+        error({ statusCode: res.code, message: res.message })
       }
+    } else {
+      error({ statusCode: 400, message: 'Article id is empty! Please check the path.' })
     }
   },
   components: {

@@ -1,0 +1,41 @@
+<template lang="html">
+  <div class="error-container">
+    <img src="data:image/png;base64,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">
+    <h2 v-if="error.statusCode === 404">Page not found!</h2>
+    <h2 v-else>{{ error.message }}</h2>
+    <nuxt-link
+      to="/"
+      class="wow fadeIn">👉Go Home</nuxt-link>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    'error': {
+      type: Object,
+      default: () => {}
+    }
+  }
+}
+</script>
+
+<style lang="less">
+  .error-container{
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img{
+      animation-name: hinge;
+      animation-duration: 3s;
+      animation-delay: 1s;
+    }
+    h2{
+      margin: 40px 0;
+      color: #333;
+      text-shadow: 4px 4px 5px rgba(0, 0, 0, .3);
+    }
+  }
+</style>
